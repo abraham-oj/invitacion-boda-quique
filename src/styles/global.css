@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #050505 0%, #0f0c0a 100%);
+  color: #f8c97c;
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Ocultar barra de scroll */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Estilos personalizados */
+.golden-glow {
+  text-shadow: 0 0 10px rgba(212, 161, 84, 0.5),
+    0 0 20px rgba(212, 161, 84, 0.3), 0 0 30px rgba(212, 161, 84, 0.2);
+}
+
+/* Estilos para botones en forma de corazón */
+.heart-button {
+  clip-path: polygon(
+    50% 0%,
+    61% 16%,
+    81% 15%,
+    68% 29%,
+    77% 47%,
+    50% 39%,
+    23% 47%,
+    32% 29%,
+    19% 15%,
+    39% 16%
+  );
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.heart-button:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 30px rgba(212, 161, 84, 0.6), 0 0 60px rgba(212, 161, 84, 0.4);
+}
+
+/* Estilos para fecha en forma de corazón */
+.heart-date-container::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(212, 161, 84, 0.1),
+    transparent
+  );
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.heart-date-container:hover::before {
+  opacity: 1;
+}
+
+/* Animación de brillo para textos */
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.text-shine {
+  background: linear-gradient(
+    90deg,
+    #d4a154 0%,
+    #f8c97c 25%,
+    #f1b66a 50%,
+    #f8c97c 75%,
+    #d4a154 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 3s linear infinite;
+}
+
+/* Estilos para bordes decorativos */
+.border-gold {
+  border-image: linear-gradient(45deg, #d4a154, #f8c97c, #d4a154) 1;
+}
+
+/* Mejora de rendimiento para animaciones */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Soporte para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #050505;
+  }
+}

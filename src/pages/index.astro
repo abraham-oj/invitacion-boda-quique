@@ -1,0 +1,182 @@
+---
+import "../styles/global.css";
+import WeddingCinema from "../components/WeddingCinema.jsx";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boda Enrique & Brenda | 13 Diciembre 2024</title>
+
+    <!-- Meta tags SEO -->
+    <meta
+      name="description"
+      content="Celebra con nosotros nuestro gran día. 13 de Diciembre 2024, Monte Albán #5001, Puebla."
+    />
+    <meta
+      name="keywords"
+      content="boda, Enrique, Brenda, matrimonio, Puebla, 13 diciembre"
+    />
+    <meta name="author" content="Enrique & Brenda" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Boda Enrique & Brenda" />
+    <meta
+      property="og:description"
+      content="13 de Diciembre 2024 | Monte Albán, Puebla"
+    />
+    <meta property="og:image" content="/novios1.jpg" />
+    <meta property="og:url" content="https://boda-enrique-brenda.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Boda Enrique & Brenda" />
+    <meta
+      name="twitter:description"
+      content="¡Nos casamos! 13 Diciembre 2024"
+    />
+    <meta name="twitter:image" content="/novios1.jpg" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preconnect para recursos externos -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Estilos de precarga -->
+    <style>
+      /* Preloader minimalista */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #050505;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+
+      .loading-heart {
+        width: 60px;
+        height: 60px;
+        background: #d4a154;
+        transform: rotate(45deg);
+        animation: heartbeat 1.5s infinite;
+        position: relative;
+      }
+
+      .loading-heart:before,
+      .loading-heart:after {
+        content: "";
+        width: 60px;
+        height: 60px;
+        background: #d4a154;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .loading-heart:before {
+        top: -30px;
+        left: 0;
+      }
+
+      .loading-heart:after {
+        top: 0;
+        left: -30px;
+      }
+
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: rotate(45deg) scale(1);
+        }
+        50% {
+          transform: rotate(45deg) scale(1.1);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-black min-h-screen antialiased overflow-x-hidden">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loading-heart"></div>
+    </div>
+
+    <!-- Contenido principal -->
+    <WeddingCinema client:load />
+
+    <!-- Mensaje para navegadores sin JavaScript -->
+    <noscript>
+      <div
+        class="fixed inset-0 bg-black text-white flex items-center justify-center p-8 text-center z-50"
+      >
+        <div class="max-w-md">
+          <h1 class="text-4xl font-bold mb-6 text-[#d4a154] font-hand">
+            Boda Enrique & Brenda
+          </h1>
+          <div class="space-y-4 mb-8">
+            <p class="text-xl">13 de Diciembre, 2024</p>
+            <p class="text-lg">Monte Albán #5001</p>
+            <p class="text-boda-secondary">Lomas de San Miguel, Puebla</p>
+          </div>
+          <p class="text-sm opacity-75 mb-6">
+            Por favor, habilita JavaScript para ver la experiencia completa de
+            nuestra boda.
+          </p>
+          <div class="flex flex-col gap-4">
+            <a
+              href="https://wa.me/522221234567?text=Confirmo%20asistencia%20a%20la%20boda"
+              class="bg-[#25D366] text-white py-3 px-6 rounded-full font-bold flex items-center justify-center gap-2"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.897 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411"
+                ></path>
+              </svg>
+              Confirmar por WhatsApp
+            </a>
+            <a
+              href="mailto:boda@enriqueybrenda.com"
+              class="border border-[#d4a154] text-[#d4a154] py-3 px-6 rounded-full font-bold"
+            >
+              Confirmar por Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </noscript>
+
+    <!-- Script para ocultar preloader -->
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          const preloader = document.getElementById("preloader");
+          preloader.style.opacity = "0";
+          setTimeout(function () {
+            preloader.style.display = "none";
+          }, 500);
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>
