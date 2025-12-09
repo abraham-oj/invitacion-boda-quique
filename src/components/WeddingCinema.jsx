@@ -476,7 +476,7 @@ const WeddingCinema = () => {
           </motion.div>
         )}
 
-        {/* ESCENA 6: FINAL - COMPLETAMENTE REDISEÑADO y ELEGANTE */}
+        {/* ESCENA 6: FINAL - Rediseñado según tus especificaciones */}
         {scene === 5 && (
           <motion.div
             key="scene5"
@@ -550,7 +550,7 @@ const WeddingCinema = () => {
                     </p>
 
                     <a
-                      href="https://goo.gl/maps/REEMPLAZA_CON_TU_LINK"
+                      href="https://maps.app.goo.gl/kGrXSrhw9Bb6MRg88"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-bold text-boda-primary border border-boda-primary/50 px-6 py-3 rounded-full hover:bg-boda-primary/10 hover:border-boda-primary transition-all duration-300 group"
@@ -591,32 +591,23 @@ const WeddingCinema = () => {
                     </p>
                   </div>
 
-                  <div className="space-y-6">
-                    <div className="bg-boda-black/40 p-5 rounded-xl border border-boda-primary/10">
-                      <h5 className="font-cine text-boda-accent text-xl mb-2">
-                        Código de Vestimenta
-                      </h5>
-                      <p className="font-body text-boda-secondary text-sm">
-                        Elegante - Formal
-                      </p>
-                    </div>
-
-                    <div className="bg-boda-black/40 p-5 rounded-xl border border-boda-primary/10">
-                      <h5 className="font-cine text-boda-accent text-xl mb-2">
-                        Confirmación
-                      </h5>
-                      <p className="font-body text-boda-secondary text-sm">
-                        Por favor confirma antes del 30 de Noviembre
-                      </p>
-                    </div>
+                  {/* Información simplificada */}
+                  <div className="bg-boda-black/40 p-6 rounded-xl border border-boda-primary/10 mb-6">
+                    <h5 className="font-cine text-boda-accent text-xl mb-3">
+                      Celebra con nosotros
+                    </h5>
+                    <p className="font-body text-boda-secondary">
+                      Compartiremos momentos inolvidables en nuestro día
+                      especial
+                    </p>
                   </div>
                 </div>
 
                 {/* Botones de acción en forma de corazón */}
                 <div className="space-y-4">
-                  {/* WhatsApp Heart Button */}
+                  {/* WhatsApp Heart Button - CON TU NÚMERO */}
                   <motion.a
-                    href="https://wa.me/522221234567?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Enrique%20y%20Brenda%20el%2013%20de%20Diciembre%20🎉"
+                    href="https://wa.me/522227050257?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Enrique%20y%20Brenda%20el%2013%20de%20Diciembre%20🎉"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
@@ -624,26 +615,9 @@ const WeddingCinema = () => {
                     className="relative block group"
                   >
                     <div className="absolute -inset-1 bg-gradient-to-r from-boda-primary via-boda-warm to-boda-gold rounded-full blur opacity-50 group-hover:opacity-80 transition-opacity"></div>
-                    <div className="relative bg-gradient-to-r from-boda-primary to-boda-gold text-black font-cine font-bold py-5 px-8 rounded-full flex items-center justify-center gap-4 text-lg overflow-hidden heart-button">
+                    <div className="relative bg-gradient-to-r from-boda-primary to-boda-gold text-black font-cine font-bold py-5 px-8 rounded-full flex items-center justify-center gap-4 text-lg overflow-hidden">
                       <FaWhatsapp size={28} />
-                      <span>CONFIRMAR POR WHATSAPP</span>
-                      <div className="absolute top-1 right-4">
-                        <FaHeart className="text-black/20 text-xl" />
-                      </div>
-                    </div>
-                  </motion.a>
-
-                  {/* Email Heart Button */}
-                  <motion.a
-                    href="mailto:boda@enriqueybrenda.com?subject=Confirmación de Asistencia&body=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda..."
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="relative block group"
-                  >
-                    <div className="absolute -inset-1 bg-gradient-to-r from-boda-accent via-boda-secondary to-boda-warm rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                    <div className="relative bg-gradient-to-r from-boda-accent to-boda-warm text-black font-cine font-bold py-5 px-8 rounded-full flex items-center justify-center gap-4 text-lg overflow-hidden heart-button border-2 border-boda-primary/30">
-                      <FaEnvelope size={26} />
-                      <span>CONFIRMAR POR EMAIL</span>
+                      <span>CONFIRMAR ASISTENCIA</span>
                       <div className="absolute top-1 right-4">
                         <FaHeart className="text-black/20 text-xl" />
                       </div>
