@@ -1,29 +1,48 @@
-import React from "react";
-import "./App.css";
-/* Asegúrate de tener Background.jsx y Background.css del paso anterior */
-import Background from "./components/Background";
-import Header from "./components/Header";
+import React, { useState } from "react";
+import WelcomeScreen from "./components/WelcomeScreen";
+import Hero from "./components/Hero";
 import Details from "./components/Details";
-import Rsvp from "./components/Rsvp";
+import MusicPlayer from "./components/MusicPlayer";
+import WhatsAppHeart from "./components/WhatsAppHeart";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const [entered, setEntered] = useState(false);
+
   return (
-    <>
-      <Background />
+    <div className="min-h-screen bg-[#fdfbf7] texture-bg">
+      <AnimatePresence>
+        {!entered && <WelcomeScreen onEnter={() => setEntered(true)} />}
+      </AnimatePresence>
 
-      <div className="invitation-card">
-        <Header />
-        <Details />
-        <Rsvp />
+      {entered && (
+        <>
+          <MusicPlayer isPlaying={entered} />
 
-        <footer
-          className="mt-16 pt-6 border-t border-[#cfb9864d] text-xs tracking-widest"
-          style={{ color: "var(--text-light)" }}
-        >
-          BRENDA & ENRIQUE • 2025
-        </footer>
-      </div>
-    </>
+          <main>
+            <Hero />
+            <Details />
+
+            {/* Sección final con frase emotiva */}
+            <div className="py-20 text-center px-6">
+              <p className="font-cinzel text-xl md:text-2xl text-[#AA8C2C] italic max-w-2xl mx-auto">
+                "Hay momentos en la vida que son especiales por sí solos, pero
+                compartirlos con las personas que amas los hace inolvidables."
+              </p>
+              <p className="mt-8 font-montserrat text-sm uppercase tracking-widest">
+                ¡No Faltes!
+              </p>
+            </div>
+
+            <footer className="bg-[#1a1a1a] text-[#555] py-8 text-center text-xs tracking-widest uppercase">
+              Brenda & Enrique • 2025
+            </footer>
+          </main>
+
+          <WhatsAppHeart />
+        </>
+      )}
+    </div>
   );
 }
 
