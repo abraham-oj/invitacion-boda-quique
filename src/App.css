@@ -1,0 +1,9 @@
+.invitation-card {
+  /* ... tus otros estilos ... */
+  width: 100%;
+  max-width: 480px; /* Esto mantiene el formato "celular" en PC */
+  margin: 20px;     /* Un poco de aire arriba y abajo si la pantalla es bajita */
+  position: relative;
+  z-index: 10;
+  /* ... resto de estilos ... */
+}
